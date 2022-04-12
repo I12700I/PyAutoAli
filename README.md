@@ -1,11 +1,10 @@
 
 <div id="top"></div>
-![Contributors][contributors-shield]][contributors-url]
-![Forks][forks-shield]][forks-url]
-![Stargazers][stars-shield]][stars-url]
-![Issues][issues-shield]][issues-url]
-![MIT License][license-shield]][license-url]
-![LinkedIn][linkedin-shield]][linkedin-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![GNU GPLv3 License][license-shield]][license-url]
 
 ## About The Project
 
@@ -118,3 +117,5 @@ Project Link: [https://github.com/gdeMojChay/PyAutoAli](https://github.com/gdeMo
 [stars-url]: https://github.com/gdeMojChay/PyAutoAli/stargazers
 [issues-shield]: https://img.shields.io/github/issues/gdeMojChay/PyAutoAli.svg?style=for-the-badge
 [issues-url]: https://github.com/gdeMojChay/PyAutoAli/issues
+[license-shield]: https://img.shields.io/github/license/gdeMojChay/PyAutoAli.svg?style=for-the-badge
+[license-url]: https://github.com/gdeMojChay/PyAutoAli/blob/master/LICENSE.txt
