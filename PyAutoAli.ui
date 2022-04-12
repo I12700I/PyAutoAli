@@ -110,7 +110,7 @@
   </connection>
  </connections>
  <slots>
-  <slot>OpenFileClicked()</slot>
   <slot>SaveToClicked()</slot>
+  <slot>OpenFileClicked()</slot>
  </slots>
 </ui>
