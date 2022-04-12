@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>359</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PyAutoAli</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QPushButton" name="OpenFileBtn">
+      <property name="text">
+       <string>Open file...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="OpenFilePath"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="SaveFileBtn">
+      <property name="text">
+       <string>Save to...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="SaveFilePath">
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="AutoOpenCheck">
+      <property name="text">
+       <string>Auto open</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="2">
+     <widget class="QPlainTextEdit" name="LinksTxtEdit">
+      <property name="plainText">
+       <string>Here will be your links</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QPushButton" name="StartBtn">
+      <property name="text">
+       <string>Start</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0" colspan="2">
+     <widget class="QProgressBar" name="progressBar">
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>OpenFileBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>OpenFileClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>46</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>179</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SaveFileBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>SaveToClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>46</x>
+     <y>49</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>179</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>OpenFileClicked()</slot>
+  <slot>SaveToClicked()</slot>
+ </slots>
+</ui>
