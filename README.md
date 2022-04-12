@@ -1,11 +1,11 @@
 
 <div id="top"></div>
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+![Contributors][contributors-shield]][contributors-url]
+![Forks][forks-shield]][forks-url]
+![Stargazers][stars-shield]][stars-url]
+![Issues][issues-shield]][issues-url]
+![MIT License][license-shield]][license-url]
+![LinkedIn][linkedin-shield]][linkedin-url]
 
 ## About The Project
 
@@ -109,3 +109,12 @@ Alex - thetypgame@gmail.com
 Project Link: [https://github.com/gdeMojChay/PyAutoAli](https://github.com/gdeMojChay/PyAutoAli)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+[contributors-shield]: https://img.shields.io/github/contributors/gdeMojChay/PyAutoAli.svg?style=for-the-badge
+[contributors-url]: https://github.com/gdeMojChay/PyAutoAli//graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/gdeMojChay/PyAutoAli/.svg?style=for-the-badge
+[forks-url]: https://github.com/gdeMojChay/PyAutoAli/network/members
+[stars-shield]: https://img.shields.io/github/stars/gdeMojChay/PyAutoAli.svg?style=for-the-badge
+[stars-url]: https://github.com/gdeMojChay/PyAutoAli/stargazers
+[issues-shield]: https://img.shields.io/github/issues/gdeMojChay/PyAutoAli.svg?style=for-the-badge
+[issues-url]: https://github.com/gdeMojChay/PyAutoAli/issues
