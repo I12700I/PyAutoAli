@@ -108,9 +108,26 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>StartBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>StartClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>46</x>
+     <y>532</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>179</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>SaveToClicked()</slot>
   <slot>OpenFileClicked()</slot>
+  <slot>StartClicked()</slot>
  </slots>
 </ui>

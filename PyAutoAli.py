@@ -9,7 +9,7 @@ class PyAutoAli(object):
     def __init__(self):
         self.timesleep: int = 5 # the duration of the pause between links
         self.maximages: int = 3 # max value of images
-        self.parser: str ="lxml" # you can use "lxml"/"html.parse"/"html5lib"
+        self.parser: str = "html.parser" # you can use "lxml"/"html.parser"/"html5lib"
         self.data: List[dict] = []
         self.openfilepath: str = ""
 
@@ -30,6 +30,8 @@ class PyAutoAli(object):
                 path = self.openfilepath[:-3]+".csv"
             except Exception as e:
                  raise
+        print(path)
+        print(self.data)
         if len(self.data)>0:
             try:
                 with open(path, "w", newline='\n') as file:
@@ -47,6 +49,7 @@ class PyAutoAli(object):
                                          item['price'],
                                          item['discond'],
                                          "\n".join(image for image in item['images'])))
+                self.data: List[dict] = []
             except Exception as e:
                  raise
 
@@ -75,8 +78,9 @@ class PyAutoAli(object):
                     "images": images
                 }
             )
+            print('add')
         except Exception as e:
-            raise
+            pass
 
 if __name__ == '__main__':
     pyAuto = PyAutoAli()
