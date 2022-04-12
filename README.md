@@ -70,7 +70,7 @@ Run the file using the command line PyAutoAli.py or gui.py using one of the comm
    python3 PyAutoAli.py
    python3 gui.py
    ```
-![product-usage](media/product-usage.gif)
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
