@@ -1,9 +1,9 @@
 
 <div id="top"></div>
-[![Contributors]([contributors-shield])][contributors-url]
-[![Forks]([forks-shield])][forks-url]
-[![Stargazers]([stars-shield])][stars-url]
-[![Issues]([issues-shield])][issues-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 [![GNU GPLv3 License]([license-shield])][license-url]
 
 ## About The Project
