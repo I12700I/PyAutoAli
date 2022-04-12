@@ -24,8 +24,31 @@ class PyAutoAli(object):
         except Exception as e:
             raise
 
-    def savefile(self, path: str) -> None:
-        pass
+    def savefile(self, path: str = "") -> None:
+        if path == "":
+            try:
+                path = self.openfilepath[:-3]+".csv"
+            except Exception as e:
+                 raise
+        if len(self.data)>0:
+            try:
+                with open(path, "w", newline='\n') as file:
+                    writer = csv.writer(file, delimiter =';')
+                    writer.writerow((
+                        "url",
+                        "name",
+                        "price",
+                        "discond",
+                        "images"
+                    ))
+                    for item in self.data:
+                        writer.writerow((item['url'],
+                                         item['name'],
+                                         item['price'],
+                                         item['discond'],
+                                         "\n".join(image for image in item['images'])))
+            except Exception as e:
+                 raise
 
     def checkurl(self, url: str) -> None:
         try:
@@ -41,8 +64,8 @@ class PyAutoAli(object):
                 price: str = soup.find("div", class_=re.compile("Product_Price__container")).next_element.text
             images: List[str] = []
             for i, image in enumerate(soup.find_all("div", class_=re.compile("Product_GalleryBarItem__barItem"))):
-                if i < self.maximages-1:
-                    images.append(image.next_element['src'].replace("_50x50", ""))
+                if i < self.maximages:
+                    images.append(re.sub(r"_50x50.*", "", image.next_element['src']))
             self.data.append(
                 {
                     "url": url,
