@@ -46,16 +46,11 @@ _Below is an example of how you can instruct your audience on installing and set
    ```sh
    git clone https://github.com/gdeMojChay/PyAutoAli.git
    ```
-2. Install NPM packages
+2. Install requirements packages
    ```sh
    pip3 install -r requirements.txt
    ```
-3. Enter your settings in `PyAutoAli.py`
-   ```py
-   self.timesleep: int = 5
-   self.maximages: int = 3
-   self.parser: str ="html.parser"
-   ```
+3. Enter your settings in cli.py or gui.py
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
