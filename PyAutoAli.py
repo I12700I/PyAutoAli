@@ -40,14 +40,14 @@ class PyAutoAli(object):
                         "url",
                         "name",
                         "price",
-                        "discond",
+                        "discount",
                         "images"
                     ))
                     for item in self.data:
                         writer.writerow((item['url'],
                                          item['name'],
                                          item['price'],
-                                         item['discond'],
+                                         item['discount'],
                                          "\n".join(image for image in item['images'])))
                 self.data: List[dict] = []
             except Exception as e:
@@ -63,7 +63,7 @@ class PyAutoAli(object):
                 discond: bool = True
                 price: str = soup.find("span", class_=re.compile("Product_UniformBanner__uniformBannerBoxDiscounts")).next_element.text
             else:
-                discond: bool = False
+                discount: bool = False
                 price: str = soup.find("div", class_=re.compile("Product_Price__container")).next_element.text
             images: List[str] = []
             for i, image in enumerate(soup.find_all("div", class_=re.compile("Product_GalleryBarItem__barItem"))):
@@ -74,7 +74,7 @@ class PyAutoAli(object):
                     "url": url,
                     "name": name,
                     "price": price,
-                    "discond": discond,
+                    "discount": discount,
                     "images": images
                 }
             )
