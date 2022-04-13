@@ -67,7 +67,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 Run the file using the command line PyAutoAli.py or gui.py using one of the commands or run one of the .exe files (in the future)
 ```sh
-   python3 PyAutoAli.py
+   python3 cli.py
    python3 gui.py
    ```
 
