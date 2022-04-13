@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>359</width>
+    <width>351</width>
     <height>600</height>
    </rect>
   </property>
@@ -14,63 +14,156 @@
    <string>PyAutoAli</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <widget class="QPushButton" name="OpenFileBtn">
-      <property name="text">
-       <string>Open file...</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="OpenFilePath"/>
-    </item>
-    <item row="1" column="0">
-     <widget class="QPushButton" name="SaveFileBtn">
-      <property name="text">
-       <string>Save to...</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QLineEdit" name="SaveFilePath">
-      <property name="inputMask">
-       <string/>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QCheckBox" name="AutoOpenCheck">
-      <property name="text">
-       <string>Auto open</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0" colspan="2">
-     <widget class="QPlainTextEdit" name="LinksTxtEdit">
-      <property name="plainText">
-       <string>Here will be your links</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QPushButton" name="StartBtn">
-      <property name="text">
-       <string>Start</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="0" colspan="2">
-     <widget class="QProgressBar" name="progressBar">
-      <property name="value">
-       <number>0</number>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   <widget class="QPushButton" name="OpenFileBtn">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>9</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open file...</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="OpenFilePath">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>10</y>
+      <width>251</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SaveFileBtn">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>38</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save to...</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="SaveFilePath">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>39</y>
+      <width>251</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="AutoOpenCheck">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>65</y>
+      <width>73</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Auto open</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="LinksTxtEdit">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>90</y>
+      <width>331</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="plainText">
+     <string>Here will be your links</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="StartBtn">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>521</y>
+      <width>331</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>550</y>
+      <width>331</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="timesleeplabel">
+    <property name="geometry">
+     <rect>
+      <x>86</x>
+      <y>64</y>
+      <width>50</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>time sleep</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maximageslabel">
+    <property name="geometry">
+     <rect>
+      <x>178</x>
+      <y>64</y>
+      <width>57</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>max images</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="sleepspinBox">
+    <property name="geometry">
+     <rect>
+      <x>134</x>
+      <y>62</y>
+      <width>42</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="imagesspinBox">
+    <property name="geometry">
+     <rect>
+      <x>234</x>
+      <y>62</y>
+      <width>42</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
@@ -124,10 +217,44 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>sleepspinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sleepChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>154</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>175</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>imagesspinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>imagesChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>254</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>175</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>SaveToClicked()</slot>
   <slot>OpenFileClicked()</slot>
   <slot>StartClicked()</slot>
+  <slot>sleepChanged()</slot>
+  <slot>imagesChanged()</slot>
  </slots>
 </ui>

@@ -10,6 +10,8 @@ class WindowClass(QMainWindow, form_class):
     def __init__(self, parent=None):
         QMainWindow.__init__(self, parent)
         self.setupUi(self)
+        self.sleepspinBox.setValue(pyAuto.timesleep)
+        self.imagesspinBox.setValue(pyAuto.maximages)
         self.openfile=""
         self.savefile=""
 
@@ -56,6 +58,12 @@ class WindowClass(QMainWindow, form_class):
                         self.LinksTxtEdit.appendPlainText(url)
         except Exception as e:
             raise
+
+    def sleepChanged(self, value):
+        pyAuto.setSettings("timesleep", value)
+
+    def imagesChanged(self, value):
+        pyAuto.setSettings("maximages", value)
 
 pyAuto = PyAutoAli()
 app = QApplication(sys.argv)

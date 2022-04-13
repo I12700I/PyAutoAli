@@ -1,5 +1,5 @@
 ### imports ###
-import sys, time, codecs, re, logging, requests, csv
+import sys, time, codecs, re, logging, requests, csv, json
 from bs4 import BeautifulSoup
 
 ### enable logging ###
@@ -7,9 +7,14 @@ from bs4 import BeautifulSoup
 
 class PyAutoAli(object):
     def __init__(self):
-        self.timesleep: int = 5 # the duration of the pause between links
-        self.maximages: int = 3 # max value of images
-        self.parser: str = "html.parser" # you can use "lxml"/"html.parser"/"html5lib"
+        self.variables: Dict = {"timesleep": ["time sleep", "timesleep"],
+                                "maximages": ["max images", "maximages"],
+                                "parser": ["parser"]}
+        self.parsers: List[str] = ["lxml", "html.parser", "html5lib"]
+        self.settings = self.getSettings()
+        self.timesleep: int = self.settings['timesleep'] # the duration of the pause between links
+        self.maximages: int = self.settings['maximages'] # max value of images
+        self.parser: str = self.settings['parser'] # you can use "lxml"/"html.parser"/"html5lib"
         self.data: List[dict] = []
         self.openfilepath: str = ""
 
@@ -81,3 +86,31 @@ class PyAutoAli(object):
             print('add')
         except Exception as e:
             pass
+
+    def getSettings(self):
+        return json.load(open("config.json"))
+
+    def setSettings(self, variable, value):
+        if variable in self.variables.keys():
+            if variable == "timesleep":
+                try:
+                    self.timesleep = int(value)
+                except Exception as e:
+                    raise
+            elif variable == "maximages":
+                try:
+                    self.maximages = int(value)
+                except Exception as e:
+                    raise
+            elif variable == "parser" and value in self.parsers:
+                try:
+                    self.parser = value
+                except Exception as e:
+                    raise
+            vals = (val for val in [self.timesleep, self.maximages, self.parser])
+            jsondict = {}
+            for var in self.variables.keys():
+                jsondict[var] = next(vals)
+            with open('config.json', 'w') as file:
+                json.dump(jsondict,
+                file)

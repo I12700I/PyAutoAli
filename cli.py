@@ -7,7 +7,8 @@ if __name__ == '__main__':
 To start, select the operating mode and proceed according to the instructions:
 0: exit
 1: manual input
-2: file input""")
+2: file input
+3: settings""")
         mode = int(input(""))
         if mode==0:
             break
@@ -37,6 +38,23 @@ To start, select the operating mode and proceed according to the instructions:
                     path=input()
                     if path == "": path = "./file.csv"
                     pyAuto.savefile(path)
+                except Exception as e:
+                    raise
+        elif mode==3:
+            print(f"""In this mode you can change the settings
+time sleep: {pyAuto.timesleep}
+max images: {pyAuto.maximages}
+parser: {pyAuto.parser}""")
+            while True:
+                try:
+                    print("Enter variable or 0 to exit")
+                    targetvariable=input()
+                    if targetvariable == "0":
+                        break
+                    for key, values in pyAuto.variables.items():
+                        if targetvariable in values:
+                            value = input("Enter new value: ")
+                            pyAuto.setSettings(key, value)
                 except Exception as e:
                     raise
         else:
