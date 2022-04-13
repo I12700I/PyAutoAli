@@ -26,7 +26,6 @@ Why:
 * [Python](https://www.python.org/)
 * [PyQt5](https://pypi.org/project/PyQt5/)
 * [BeautifulSoup4](https://pypi.org/project/beautifulsoup4/)
-* [lxml](https://pypi.org/project/lxml/)
 * [requests](https://pypi.org/project/requests/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -55,7 +54,7 @@ _Below is an example of how you can instruct your audience on installing and set
    ```py
    self.timesleep: int = 5
    self.maximages: int = 3
-   self.parser: str ="lxml"
+   self.parser: str ="html.parser"
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
