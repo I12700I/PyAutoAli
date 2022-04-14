@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QMessageBox
-from PyQt5 import uic
+from PyQt5 import uic, QtGui
 import sys
 from PyAutoAli import *
 import os
@@ -10,6 +10,7 @@ class WindowClass(QMainWindow, form_class):
     def __init__(self, parent=None):
         QMainWindow.__init__(self, parent)
         self.setupUi(self)
+        self.setWindowIcon(QtGui.QIcon('favicon.ico'))
         self.sleepspinBox.setValue(pyAuto.timesleep)
         self.imagesspinBox.setValue(pyAuto.maximages)
         self.openfile=""
