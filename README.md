@@ -5,7 +5,8 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![GNU GPLv3 License][license-shield]][license-url]
-
+[![github-download-count][download-shield]][download-url]
+[![github-latest-release][latest-shield]][latest-url]
 ## About The Project
 
 ![product-screenshot](media/product-screenshot.png)
@@ -50,20 +51,31 @@ _Below is an example of how you can instruct your audience on installing and set
    ```sh
    pip3 install -r requirements.txt
    ```
-3. Enter your settings in cli.py or gui.py
+3. Enter your settings in config.json
+
+### Releases
+
+1. Go to [Releases](https://github.com/gdeMojChay/PyAutoAli/releases)
+   and download one of the precompiled exes. Choise CL or GU interfaces. 
+
+2. Run exe file and configure.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Run the file using the command line PyAutoAli.py or gui.py using one of the commands or run one of the .exe files (in the future)
+Run the file using the command line PyAutoAli.py or gui.py using one of the commands
 ```sh
    python3 cli.py
    python3 gui.py
    ```
+
+### OR
+
+1. Run one of the .exe files
+
+2. Set "Open file..." and "Save to..." fields and press "Start" button
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -113,3 +125,7 @@ Project Link: [https://github.com/gdeMojChay/PyAutoAli](https://github.com/gdeMo
 [issues-url]: https://github.com/gdeMojChay/PyAutoAli/issues
 [license-shield]: https://img.shields.io/github/license/gdeMojChay/PyAutoAli.svg?style=for-the-badge
 [license-url]: https://github.com/gdeMojChay/PyAutoAli/blob/master/LICENSE.txt
+[download-shield]: https://img.shields.io/github/v/release/gdeMojChay/PyAutoAli
+[download-url]: ../../releases
+[latest-shield]: https://img.shields.io/github/downloads/gdeMojChay/PyAutoAli/total.svg
+[latest-url]: ../../releases
