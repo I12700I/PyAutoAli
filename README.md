@@ -125,7 +125,7 @@ Project Link: [https://github.com/gdeMojChay/PyAutoAli](https://github.com/gdeMo
 [issues-url]: https://github.com/gdeMojChay/PyAutoAli/issues
 [license-shield]: https://img.shields.io/github/license/gdeMojChay/PyAutoAli.svg?style=for-the-badge
 [license-url]: https://github.com/gdeMojChay/PyAutoAli/blob/master/LICENSE.txt
-[download-shield]: https://img.shields.io/github/v/release/gdeMojChay/PyAutoAli
+[download-shield]: https://img.shields.io/github/v/release/gdeMojChay/PyAutoAli.svg?style=for-the-badge
 [download-url]: ../../releases
-[latest-shield]: https://img.shields.io/github/downloads/gdeMojChay/PyAutoAli/total.svg
+[latest-shield]: https://img.shields.io/github/downloads/gdeMojChay/PyAutoAli/total.svg?style=for-the-badge
 [latest-url]: ../../releases
