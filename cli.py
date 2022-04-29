@@ -19,11 +19,11 @@ To start, select the operating mode and proceed according to the instructions:
                     print("Enter url or 0 to exit")
                     url = input()
                     if url == "0": break
-                    pyAuto.checkurl(url)
+                    pyAuto.check_url(url)
                     print("Enter the path to the file where you want to save the result (by default ./file.csv)")
                     path=input()
                     if path == "": path = "./file.csv"
-                    pyAuto.savefile(path)
+                    pyAuto.save_file(path)
                 except Exception as e:
                     raise
         elif mode==2:
@@ -33,11 +33,11 @@ To start, select the operating mode and proceed according to the instructions:
                     print("Enter path or 0 to exit")
                     path=input()
                     if path == "0": break
-                    pyAuto.checkfile(path)
+                    pyAuto.check_file(path)
                     print("Enter the path to the file where you want to save the result (by default ./file.csv)")
                     path=input()
                     if path == "": path = "./file.csv"
-                    pyAuto.savefile(path)
+                    pyAuto.save_file(path)
                 except Exception as e:
                     raise
         elif mode==3:
@@ -54,7 +54,7 @@ parser: {pyAuto.parser}""")
                     for key, values in pyAuto.variables.items():
                         if targetvariable in values:
                             value = input("Enter new value: ")
-                            pyAuto.setSettings(key, value)
+                            pyAuto.set_settings(key, value)
                 except Exception as e:
                     raise
         else:

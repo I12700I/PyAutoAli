@@ -18,7 +18,7 @@ class PyAutoAli(object):
         self.data: List[dict] = []
         self.openfilepath: str = ""
 
-    def checkfile(self, path: str) -> None:
+    def check_file(self, path: str) -> None:
         self.data: List[dict] = []
         self.openfilepath: str = path
         try:
@@ -29,14 +29,12 @@ class PyAutoAli(object):
         except Exception as e:
             raise
 
-    def savefile(self, path: str = "") -> None:
+    def save_file(self, path: str = "") -> None:
         if path == "":
             try:
                 path = self.openfilepath[:-3]+".csv"
             except Exception as e:
                  raise
-        print(path)
-        print(self.data)
         if len(self.data)>0:
             try:
                 with open(path, "w", newline='\n') as file:
@@ -58,7 +56,7 @@ class PyAutoAli(object):
             except Exception as e:
                  raise
 
-    def checkurl(self, url: str) -> None:
+    def check_url(self, url: str) -> None:
         try:
             html = requests.get(url)
             url: string = html.url
@@ -83,14 +81,15 @@ class PyAutoAli(object):
                     "images": images
                 }
             )
-            print('add')
         except Exception as e:
             pass
 
-    def getSettings(self):
+    def get_settings(self):
         return json.load(open("config.json"))
 
-    def setSettings(self, variable, value):
+    def set_settings(self,
+                     variable,
+                     value):
         if variable in self.variables.keys():
             if variable == "timesleep":
                 try:

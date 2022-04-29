@@ -1,8 +1,8 @@
+import sys
+import os
 from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QMessageBox
 from PyQt5 import uic, QtGui
-import sys
 from PyAutoAli import *
-import os
 
 form_class = uic.loadUiType("PyAutoAli.ui")[0]  # Load the UI
 
@@ -16,18 +16,19 @@ class WindowClass(QMainWindow, form_class):
         self.openfile=""
         self.savefile=""
 
-    def StartClicked(self):
-        if (self.openfile != "" or self.LinksTxtEdit.toPlainText()!="Here will be your links") and self.savefile != "":
+    def start_clicked(self):
+        if ((self.openfile != ""
+            or self.LinksTxtEdit.toPlainText()!="Here will be your links")
+            and self.savefile != ""):
             try:
                 file = self.LinksTxtEdit.toPlainText()
                 lines = file.split('\n')
-                print(lines)
                 self.progressBar.setValue(0)
                 self.progressBar.setMaximum(len(lines))
                 for url in lines:
-                    pyAuto.checkurl(url)
+                    pyAuto.check_url(url)
                     self.progressBar.setValue(self.progressBar.value()+1)
-                pyAuto.savefile(self.savefile)
+                pyAuto.save_file(self.savefile)
                 if self.AutoOpenCheck.isChecked():
                     os.system(self.savefile)
             except Exception as e:
@@ -39,18 +40,24 @@ class WindowClass(QMainWindow, form_class):
             msg.setIcon(QMessageBox.Warning)
             msg.exec_()
 
-    def SaveToClicked(self):
+    def save_to_clicked(self):
         try:
             if self.openfile=="":
                 self.openfile="file.txt"
-            self.savefile, _ = QFileDialog.getSaveFileName(self, 'Save to', self.openfile[:-3]+"csv", "CSV files (*.csv)")
+            self.savefile, _ = QFileDialog.getSaveFileName(self,
+                                                           'Save to',
+                                                           self.openfile[:-3]+"csv",
+                                                           "CSV files (*.csv)")
             self.SaveFilePath.setText(self.savefile)
         except Exception as e:
             raise
 
-    def OpenFileClicked(self):
+    def open_file_clicked(self):
         try:
-            self.openfile, _ = QFileDialog.getOpenFileName(self, 'Links', r"", "Text files (*.txt)")
+            self.openfile, _ = QFileDialog.getOpenFileName(self,
+                                                           'Links',
+                                                           r"",
+                                                           "Text files (*.txt)")
             self.OpenFilePath.setText(self.openfile)
             self.LinksTxtEdit.setPlainText("")
             if self.openfile != "":
@@ -60,11 +67,11 @@ class WindowClass(QMainWindow, form_class):
         except Exception as e:
             raise
 
-    def sleepChanged(self, value):
-        pyAuto.setSettings("timesleep", value)
+    def sleep_changed(self, value):
+        pyAuto.set_settings("timesleep", value)
 
-    def imagesChanged(self, value):
-        pyAuto.setSettings("maximages", value)
+    def images_changed(self, value):
+        pyAuto.set_settings("maximages", value)
 
 pyAuto = PyAutoAli()
 app = QApplication(sys.argv)
