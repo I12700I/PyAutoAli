@@ -43,7 +43,7 @@ To get a local copy up and running follow these simple example steps.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/gdeMojChay/PyAutoAli.git
+   git clone https://github.com/I12700I/PyAutoAli.git
    ```
 2. Install requirements packages
    ```sh
@@ -53,7 +53,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Releases
 
-1. Go to [Releases](https://github.com/gdeMojChay/PyAutoAli/releases)
+1. Go to [Releases](https://github.com/I12700I/PyAutoAli/releases)
    and download one of the precompiled exes. Choise CL or GU interfaces. 
 
 2. Run exe file and configure.
@@ -109,21 +109,21 @@ Distributed under the GNU GPLv3 License. See `LICENSE.txt` for more information.
 
 Alex - thetypgame@gmail.com
 
-Project Link: [https://github.com/gdeMojChay/PyAutoAli](https://github.com/gdeMojChay/PyAutoAli)
+Project Link: [https://github.com/I12700I/PyAutoAli](https://github.com/I12700I/PyAutoAli)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-[contributors-shield]: https://img.shields.io/github/contributors/gdeMojChay/PyAutoAli.svg?style=for-the-badge
-[contributors-url]: https://github.com/gdeMojChay/PyAutoAli/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/gdeMojChay/PyAutoAli.svg?style=for-the-badge
-[forks-url]: https://github.com/gdeMojChay/PyAutoAli/network/members
-[stars-shield]: https://img.shields.io/github/stars/gdeMojChay/PyAutoAli.svg?style=for-the-badge
-[stars-url]: https://github.com/gdeMojChay/PyAutoAli/stargazers
-[issues-shield]: https://img.shields.io/github/issues/gdeMojChay/PyAutoAli.svg?style=for-the-badge
-[issues-url]: https://github.com/gdeMojChay/PyAutoAli/issues
-[license-shield]: https://img.shields.io/github/license/gdeMojChay/PyAutoAli.svg?style=for-the-badge
-[license-url]: https://github.com/gdeMojChay/PyAutoAli/blob/master/LICENSE.txt
-[download-shield]: https://img.shields.io/github/v/release/gdeMojChay/PyAutoAli.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/I12700I/PyAutoAli.svg?style=for-the-badge
+[contributors-url]: https://github.com/I12700I/PyAutoAli/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/I12700I/PyAutoAli.svg?style=for-the-badge
+[forks-url]: https://github.com/I12700I/PyAutoAli/network/members
+[stars-shield]: https://img.shields.io/github/stars/I12700I/PyAutoAli.svg?style=for-the-badge
+[stars-url]: https://github.com/I12700I/PyAutoAli/stargazers
+[issues-shield]: https://img.shields.io/github/issues/I12700I/PyAutoAli.svg?style=for-the-badge
+[issues-url]: https://github.com/I12700I/PyAutoAli/issues
+[license-shield]: https://img.shields.io/github/license/I12700I/PyAutoAli.svg?style=for-the-badge
+[license-url]: https://github.com/I12700I/PyAutoAli/blob/master/LICENSE.txt
+[download-shield]: https://img.shields.io/github/v/release/I12700I/PyAutoAli.svg?style=for-the-badge
 [download-url]: ../../releases
-[latest-shield]: https://img.shields.io/github/downloads/gdeMojChay/PyAutoAli/total.svg?style=for-the-badge
+[latest-shield]: https://img.shields.io/github/downloads/I12700I/PyAutoAli/total.svg?style=for-the-badge
 [latest-url]: ../../releases
